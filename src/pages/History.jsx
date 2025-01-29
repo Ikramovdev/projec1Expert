@@ -52,7 +52,7 @@ const History = () => {
                   <span className='w-[1px] h-[38px] bg-black flex justify-center'></span>
                   <p className='w-[25%] text-center'>{item.estate_type}</p>
                   <span className='w-[1px] h-[38px] bg-black'></span>
-                  <strong className='w-[25%] text-center'>{item.price} so'm</strong>
+                  <strong className='w-[25%] text-center'>{item.price} сум</strong>
                   <span className='w-[1px] h-[38px] bg-black'></span>
                   <div onClick={() => handleShowPrice(item.id)} className='w-[33%] flex items-center cursor-pointer justify-center gap-[10px]'>
                     <p>{t('history.veiw')}</p>

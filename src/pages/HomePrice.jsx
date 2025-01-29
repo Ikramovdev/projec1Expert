@@ -76,22 +76,22 @@ const HomePrice = () => {
                     {newData.details.area_total &&
                       <div className='flex items-center justify-between  text-start'>
                         <h3 className='font-semibold text-[20px] text-black leading-[33.14px]'>{t('homePrice.areaTotal')}</h3>
-                        <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area_total}m</p>
+                        <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area_total} м</p>
                       </div>
                     }
                     {newData.details.area_livable &&
                       <div className='flex items-center justify-between  text-start'>
                         <h3 className='font-semibold text-[20px] text-black leading-[33.14px]'>{t('homePrice.areaLivable')}</h3>
-                        <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area_livable}m kv.</p>
+                        <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area_livable} Кв.м</p>
                       </div>
                     }
                     <div className='flex items-center justify-between  text-start'>
                       <h3 className='font-semibold text-[20px] text-black leading-[33.14px]'>{t('homePrice.objectArea')}</h3>
-                      <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area}m kv.</p>
+                      <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area} Кв.м</p>
                     </div>
                     <div className='flex items-center justify-between  text-start'>
                       <h3 className='font-semibold text-[20px] text-black leading-[33.14px]'>{t('homePrice.ceilingHeight')}</h3>
-                      <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.ceiling_height}m</p>
+                      <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.ceiling_height} м</p>
                     </div>
                     <div className='flex items-center justify-between  text-start'>
                       <h3 className='font-semibold text-[20px] text-black leading-[33.14px]'>{t('homePrice.propertyStatus')}</h3>

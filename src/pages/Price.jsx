@@ -517,7 +517,7 @@ const Price = () => {
                     </div>
                     <div className="flex items-center gap-[10px]">
                       <span className="font-bold"> {t('price.pricehouseArea')} </span>
-                      <p>{kadastrData.area}m kv</p>
+                      <p>{kadastrData.area} Кв.м</p>
                     </div>
                   </div>
                 )}

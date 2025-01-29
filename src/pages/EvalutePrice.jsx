@@ -24,7 +24,7 @@ const EvalutePrice = () => {
   const [data, setData] = useState([])
   const navigate = useNavigate()
   const [active, setActive] = useState('Click')
-  // carda data input 
+  // carda data input
   const [inputValue, setInputValue] = useState(null);
   const handleInputChange = (e) => {
     let value = e.target.value.replace(/[^0-9]/g, "");
@@ -33,17 +33,17 @@ const EvalutePrice = () => {
     }
     setInputValue(value || '');
   };
-  // carda data input 
-  // card num input 
+  // carda data input
+  // card num input
   const [inputCardNum, setInputCardNum] = useState("");
   function handleCardNumDChange(e) {
     let valueCardNum = e.target.value.replace(/[^0-9]/g, "");
     let formattedCardNum = valueCardNum.match(/.{1,4}/g)?.join(" ") || "";
     setInputCardNum(formattedCardNum);
   }
-  // card num input 
+  // card num input
 
-  // get INfo 
+  // get INfo
   useEffect(() => {
     instance().get(`${API_REQUEST}/properties/real-estate/${id}/`, {
       headers: {
@@ -53,12 +53,12 @@ const EvalutePrice = () => {
       setData(res.data);
     });
   }, [id]);
-  // get INfo 
+  // get INfo
 
-  // post document 
+  // post document
   function handlePaymentClick(e) {
     e.preventDefault();
-    toast.success(('evoutePrice.payment'), {
+    toast.success(t('evoutePrice.payment'), {
       className: "scale-[1.5]",
     });
     setTimeout(() => {
@@ -74,9 +74,9 @@ const EvalutePrice = () => {
       setSaveDocument(true)
     }, 800);
   }
-  // post document 
+  // post document
 
-  // Phone change 
+  // Phone change
   function handlePhoneCHange(e) {
     const value = e.target.value;
     if (!value.startsWith("+998")) {
@@ -85,7 +85,7 @@ const EvalutePrice = () => {
       setPhone(value);
     }
   }
-  // Phone change 
+  // Phone change
   return (
     <div className='flex'>
       <div className='w-[22%] h-[92.8vh]'> <Navbar /> </div>
