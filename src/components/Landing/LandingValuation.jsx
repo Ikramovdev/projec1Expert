@@ -8,7 +8,8 @@ const LandingValuation = () => {
     <section className='mb-[177px] Valuation'>
         <div className='w-[1291px] mx-auto pb-[23px] flex justify-between gap-[36px]'>
             <h2 className='w-[373px] font-bold text-[36px] leading-[40px] mt-[40px]'>
-            Aniq qulfni ochish Mulkni baholash
+                {t('landing.valuation.title')}
+            {/*Aniq qulfni ochish Mulkni baholash*/}
             </h2>
             <ul className='w-[860px] flex flex-wrap gap-[6px]'>
                 {[0, 1, 2, 3].map((index) => (
