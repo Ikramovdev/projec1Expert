@@ -49,7 +49,7 @@ const PublicOpinion = () => {
     ];
     return (
         <div className='mt-[226px] mb-[134px] overflow-hidden'>
-            <h2 className='font-bold text-[36px] leading-[40px] text-[#111827] mb-[54px] text-center'>{t('publicOpinion.title')}</h2>
+            <h2 className='font-bold text-[36px] leading-[40px] text-[#111827] mb-[54px] text-center'>{t('landing.publicOpinion.title')}</h2>
             <div className='comments'>
                 <div className='mx-auto pt-[57px] pb-[104px]'>
                     <div className='overflow-hidden mb-[54px]'>

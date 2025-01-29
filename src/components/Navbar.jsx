@@ -14,25 +14,25 @@ const Navbar = () => {
   const NavbarList = [
     {
       id: 1,
-      title: t('navbar.price'),
+      title: t('dashboard.navbar.price'),
       path: PATH.price,
       img: <NavPriceImg />,
     },
     {
       id: 2,
-      title: t('navbar.history'),
+      title: t('dashboard.navbar.history'),
       path: PATH.history,
       img: <NavHistoryImg />,
     },
     {
       id: 3,
-      title: t('navbar.guide'),
+      title: t('dashboard.navbar.guide'),
       path: PATH.guide,
       img: <GuideIcon />,
     },
     {
       id: 4,
-      title: t('navbar.profile'),
+      title: t('dashboard.navbar.profile'),
       path: PATH.profile,
       img: <NavAvaImg />,
     },
@@ -58,7 +58,7 @@ const Navbar = () => {
       </ul>
       <div className='absolute left-[25px] bottom-0'>
         <div className='w-[262px] px-5 pt-5 pb-[29px] rounded-tl-[15px] rounded-tr-[15px] border-[1px] border-[#000] border-b-0'>
-          <p className='font-medium text-[14px] leading-[18.22px] text-black opacity-[30%]'>{t('navbar.price')}</p>
+          <p className='font-medium text-[14px] leading-[18.22px] text-black opacity-[30%]'>{t('dashboard.navbar.price')}</p>
           <div className='flex items-center gap-4 mt-[21px]'>
             <span className='rounded-full w-[48px] h-[48px] bg-gray-300'></span>
             {/* <img className='rounded-full w-[48px] h-[48px]' src="/" alt="randow image" width={48} height={48} /> */}
@@ -66,17 +66,17 @@ const Navbar = () => {
           </div>
           <button onClick={() => setOpenModal(true)} className='w-[226px] py-[14px] flex items-start pl-[20px] gap-[16px] mt-[40px] bg-[#1E90FFCC] rounded-[8px]'>
             <LogAutIcon />
-            <p className='font-regular text-[16px] leading-[24px] text-white'>{t('navbar.logout')}</p>
+            <p className='font-regular text-[16px] leading-[24px] text-white'>{t('dashboard.navbar.logout')}</p>
           </button>
         </div>
       </div>
       <Modal 
         open={openModal} 
-        cancelText={t('navbar.cancel')} 
-        okText={t('navbar.yes')} 
+        cancelText={t('dashboard.navbar.cancel')}
+        okText={t('dashboard.navbar.yes')}
         onCancel={() => setOpenModal(false)} 
         onOk={handleLogAutClick} 
-        title={t('navbar.logoutConfirm')} 
+        title={t('dashboard.navbar.logoutConfirm')}
       />
     </div>
   )

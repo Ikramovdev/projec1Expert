@@ -37,12 +37,12 @@ const History = () => {
       <div className='flex'>
         <div className='w-[22%] h-[92.8vh]'> <Navbar /> </div>
         <div className='w-[78%] h-[100vh] pt-[32px] pl-[83px] border-l-[1px] border-[#D3D3D3]'>
-          <h1 className='font-semibold text-[32px] leading-[38.73px] mb-[43px]'>{t('history.title')}</h1>
+          <h1 className='font-semibold text-[32px] leading-[38.73px] mb-[43px]'>{t('dashboard.history.title')}</h1>
           <ul className='w-[895px] flex items-center justify-between pl-[31px] pr-[43px] border-b-[1px] border-black pb-[8px] opacity-[40%]'>
-            <li className='font-regular text-[24px] laeding-[36px] text-start'>{t('history.listtext1')}</li>
-            <li className='font-regular text-[24px] laeding-[36px] mr-[50px]'>{t('history.housetype')}</li>
-            <li className='font-regular text-[24px] laeding-[36px] mr-[85px]'>{t('history.price')}</li>
-            <li className='font-regular text-[24px] laeding-[36px] mr-[20px]'>{t('history.veiw')}</li>
+            <li className='font-regular text-[24px] laeding-[36px] text-start'>{t('dashboard.history.listtext1')}</li>
+            <li className='font-regular text-[24px] laeding-[36px] mr-[50px]'>{t('dashboard.history.housetype')}</li>
+            <li className='font-regular text-[24px] laeding-[36px] mr-[85px]'>{t('dashboard.history.price')}</li>
+            <li className='font-regular text-[24px] laeding-[36px] mr-[20px]'>{t('dashboard.history.veiw')}</li>
           </ul>
           <ul className='w-[950px] h-[70vh] overflow-y-auto flex flex-col gap-[30px] mt-[42px]'>
             {newData?.length > 0 ? (
@@ -55,13 +55,13 @@ const History = () => {
                   <strong className='w-[25%] text-center'>{item.price} сум</strong>
                   <span className='w-[1px] h-[38px] bg-black'></span>
                   <div onClick={() => handleShowPrice(item.id)} className='w-[33%] flex items-center cursor-pointer justify-center gap-[10px]'>
-                    <p>{t('history.veiw')}</p>
+                    <p>{t('dashboard.history.veiw')}</p>
                     <ShowEye />
                   </div>
                 </li>
               ))
             ) :
-              (<p>{t('history.noData')}</p>)}
+              (<p>{t('dashboard.history.noData')}</p>)}
           </ul>
         </div>
       </div >

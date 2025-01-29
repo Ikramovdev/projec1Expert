@@ -33,7 +33,7 @@ const Price = () => {
 
   const [typeOfHousing, setTypeOfHousing] = useState([]); // House Type
   const [ownership, setOwnerShip] = useState(null); // House Owner Type
-  const [displayText, setDisplayText] = useState(t('displayText.available'));
+  const [displayText, setDisplayText] = useState(t('dashboard.displayText.available'));
   const [around, setAround] = useState([]); // house Around
 
   const [legalEntity, setLegalEntity] = useState(false); // owner
@@ -46,15 +46,15 @@ const Price = () => {
   // House Function and List
   const HouseTypesList = [
     {
-      label: t('houseTypes.business'),
+      label: t('dashboard.houseTypes.business'),
       value: "bisnes",
     },
     {
-      label: t('houseTypes.apartment'),
+      label: t('dashboard.houseTypes.apartment'),
       value: "kvartira",
     },
     {
-      label: t('houseTypes.house'),
+      label: t('dashboard.houseTypes.house'),
       value: "hovli",
     },
   ];
@@ -62,37 +62,37 @@ const Price = () => {
     setTypeOfHousing(value);
     if (value === "bisnes") {
       setPropertyType(true);
-      setDisplayText(t('displayText.available'));
+      setDisplayText(t('dashboard.displayText.available'));
     } else if (value === "kvartira" || value === "hovli") {
       setPropertyType(false);
     } else if (value === "Ofis") {
-      setDisplayText(t('displayText.office'));
+      setDisplayText(t('dashboard.displayText.office'));
     } else if (value === "Do'kon") {
-      setDisplayText(t('displayText.shop'));
+      setDisplayText(t('dashboard.displayText.shop'));
     } else if (value === "Noturar(Komerskiy)") {
-      setDisplayText(t('displayText.commercial'));
+      setDisplayText(t('dashboard.displayText.commercial'));
     }
   }
   useEffect(() => {
     switch (typeOfHousing) {
       case "hovli":
-        setDisplayText(t('displayText.house'));
+        setDisplayText(t('dashboard.displayText.house'));
         break;
       case "kvartira":
-        setDisplayText(t('displayText.apartment'));
+        setDisplayText(t('dashboard.displayText.apartment'));
         break;
       case "Ofis":
-        setDisplayText(t('displayText.office'));
+        setDisplayText(t('dashboard.displayText.office'));
         break;
       case "Do'kon":
-        setDisplayText(t('displayText.shop'));
+        setDisplayText(t('dashboard.displayText.shop'));
         break;
       case "Noturar(Komerskiy)":
-        setDisplayText(t('displayText.commercial'));
+        setDisplayText(t('dashboard.displayText.commercial'));
         break;
       default:
         if (typeOfHousing !== "bisnes") {
-          setDisplayText(t('displayText.available'));
+          setDisplayText(t('dashboard.displayText.available'));
         }
     }
   }, [typeOfHousing, t]);
@@ -100,55 +100,55 @@ const Price = () => {
   // Around Function and List
   const aroundListList = [
     {
-      label: t('aroundList.hospital'),
+      label: t('dashboard.aroundList.hospital'),
       value: "Kasalxona",
     },
     {
-      label: t('aroundList.playground'),
+      label: t('dashboard.aroundList.playground'),
       value: "Bolalar maydonchasi",
     },
     {
-      label: t('aroundList.kindergarten'),
+      label: t('dashboard.aroundList.kindergarten'),
       value: "Bolalar bogʻchasi",
     },
     {
-      label: t('aroundList.busStop'),
+      label: t('dashboard.aroundList.busStop'),
       value: "Bekatlar",
     },
     {
-      label: t('aroundList.park'),
+      label: t('dashboard.aroundList.park'),
       value: "Park",
     },
     {
-      label: t('aroundList.greenZone'),
+      label: t('dashboard.aroundList.greenZone'),
       value: "Yashil zona",
     },
     {
-      label: t('aroundList.entertainment'),
+      label: t('dashboard.aroundList.entertainment'),
       value: "Koʻngilochar muassasalar",
     },
     {
-      label: t('aroundList.restaurant'),
+      label: t('dashboard.aroundList.restaurant'),
       value: "Restoran",
     },
     {
-      label: t('aroundList.cafe'),
+      label: t('dashboard.aroundList.cafe'),
       value: "Kafelar",
     },
     {
-      label: t('aroundList.parking'),
+      label: t('dashboard.aroundList.parking'),
       value: "Turargoh",
     },
     {
-      label: t('aroundList.supermarket'),
+      label: t('dashboard.aroundList.supermarket'),
       value: "Supermarket",
     },
     {
-      label: t('aroundList.shops'),
+      label: t('dashboard.aroundList.shops'),
       value: "Doʻkonlar",
     },
     {
-      label: t('aroundList.school'),
+      label: t('dashboard.aroundList.school'),
       value: "Maktab",
     },
   ];
@@ -257,19 +257,19 @@ const Price = () => {
   // sustain function
   const sustainList = [
     {
-      label: t('sustainTypes.excellent'),
+      label: t('dashboard.sustainTypes.excellent'),
       value: "A'lo",
     },
     {
-      label: t('sustainTypes.good'),
+      label: t('dashboard.sustainTypes.good'),
       value: "Yaxshi",
     },
     {
-      label: t('sustainTypes.average'),
+      label: t('dashboard.sustainTypes.average'),
       value: "O'rtacha",
     },
     {
-      label: t('sustainTypes.poor'),
+      label: t('dashboard.sustainTypes.poor'),
       value: "Qoniqarsiz",
     },
   ];
@@ -332,69 +332,69 @@ const Price = () => {
   const propertyTypesList = [
     {
       value: "Ofis",
-      label: t('propertyTypes.office'),
+      label: t('dashboard.propertyTypes.office'),
     },
     {
       value: "Do'kon",
-      label: t('propertyTypes.shop'),
+      label: t('dashboard.propertyTypes.shop'),
     },
     {
       value: "Noturar(Komerskiy)",
-      label: t('propertyTypes.commercial'),
+      label: t('dashboard.propertyTypes.commercial'),
     },
   ];
 
   const ownershipTypesList = [
     {
       value: "jismoniy",
-      label: t('ownershipTypes.individual'),
+      label: t('dashboard.ownershipTypes.individual'),
     },
     {
       value: "yuridik",
-      label: t('ownershipTypes.legal'),
+      label: t('dashboard.ownershipTypes.legal'),
     },
   ];
 
   const amenitiesList = [
     {
       value: "Telefon",
-      label: t('amenities.phone'),
+      label: t('dashboard.amenities.phone'),
     },
     {
       value: "Kabelli TV",
-      label: t('amenities.cableTV'),
+      label: t('dashboard.amenities.cableTV'),
     },
     {
       value: "Oshxona",
-      label: t('amenities.kitchen'),
+      label: t('dashboard.amenities.kitchen'),
     },
     {
       value: "Balkon",
-      label: t('amenities.balcony'),
+      label: t('dashboard.amenities.balcony'),
     },
     {
       value: "Mikravalnovka",
-      label: t('amenities.microwave'),
+      label: t('dashboard.amenities.microwave'),
     },
     {
       value: "Muzlatgich",
-      label: t('amenities.fridge'),
+      label: t('dashboard.amenities.fridge'),
     },
     {
       value: "Wifi",
-      label: t('amenities.wifi'),
+      label: t('dashboard.amenities.wifi'),
     },
     {
       value: "Televizor",
-      label: t('amenities.tv'),
+      label: t('dashboard.amenities.tv'),
     },
     {
       value: "Kanditsaner",
-      label: t('amenities.ac'),
+      label: t('dashboard.amenities.ac'),
     },
     {
       value: "Kir yuvish moshinasi",
-      label: t('amenities.washingMachine'),
+      label: t('dashboard.amenities.washingMachine'),
     },
   ];
 
@@ -407,7 +407,7 @@ const Price = () => {
         </div>
         <div className="w-[78%] pl-[64px] pr-[50px] border-l-[1px] border-[#D3D3D3] pt-[32px] h-[100vh] flex flex-col">
           <div className="flex items-center justify-between mb-[43px]">
-            <h1 className="font-semibold text-[32px] leading-[38.73px]">{t('price.title')}</h1>
+            <h1 className="font-semibold text-[32px] leading-[38.73px]">{t('dashboard.price.title')}</h1>
             <LanguageSelect
               language={language}
               onChange={handleLanguageChange}
@@ -422,24 +422,24 @@ const Price = () => {
           >
             <label className="w-[672px] flex items-center justify-between mb-[18px]">
               <span className="font-light text-[15px] leading-[18.2px] text-[#202020]">
-              {t('price.houseType')}
+              {t('dashboard.price.houseType')}
               </span>
               <Select
                 size="large"
                 className="w-[500px] rounded-[12px] bg-transparent outline-none border-[1px] border-[#DCDCDC] text-[#898989]"
                 showSearch
-                placeholder={`${t('price.placeholder')}`}
+                placeholder={`${t('dashboard.price.placeholder')}`}
                 onChange={handleChangeHouseType}
                 options={HouseTypesList}
               />
             </label>
             {propertyType && (
               <label className="w-[672px] flex items-center justify-between mb-[20px]">
-                <span className="font-light text-[15px] leading-[18.2px] text-[#202020]"> {t('price.officeType')} </span>
+                <span className="font-light text-[15px] leading-[18.2px] text-[#202020]"> {t('dashboard.price.officeType')} </span>
                 <Select
                   size="large"
                   className="w-[500px] rounded-[12px] bg-transparent outline-none border-[1px] border-[#DCDCDC] text-[#898989]"
-                  placeholder={`${t('price.placeholder')}`}
+                  placeholder={`${t('dashboard.price.placeholder')}`}
                   onChange={handleChangeHouseType}
                   options={propertyTypesList}
                 />
@@ -447,13 +447,13 @@ const Price = () => {
             )}
             <label className="w-[672px] flex items-center justify-between mb-[18px]">
               <span className="font-light text-[15px] leading-[18.2px] text-[#202020]">
-                {t('price.owner')}
+                {t('dashboard.price.owner')}
               </span>
               <Select
                 size="large"
                 className="w-[500px] rounded-[12px] bg-transparent outline-none border-[1px] border-[#DCDCDC] text-[#898989]"
                 showSearch
-                placeholder={`${t('price.placeholder')}`}
+                placeholder={`${t('dashboard.price.placeholder')}`}
                 onChange={onChange}
                 options={ownershipTypesList}
               />
@@ -464,11 +464,11 @@ const Price = () => {
                   onChange={handlePNFLChange}
                   name="PNFL"
                   className="w-[226px] bg-white py-[17px] font-regular text-[14px] leading-[16.94px] text-black px-[10px] rounded-[12px] outline-none border-[1px] border-[#DCDCDC] placeholder:text-black"
-                  placeholder={`${t('price.PNFL')}`}
+                  placeholder={`${t('dashboard.price.PNFL')}`}
                 />
                 {pnflName && (
                   <p className="w-[498px] py-[24px] rounded-[15px] border-[1px] border-[#DCDCDC] pl-[15px] pr-[5px] cursor-not-allowed font-regular text-[14px] leading-[17px]">
-                    <span className="font-bold"> {t('price.fish')}: </span>
+                    <span className="font-bold"> {t('dashboard.price.fish')}: </span>
                     {pnflName}
                   </p>
                 )}
@@ -482,7 +482,7 @@ const Price = () => {
                   onChange={handleInnChange}
                   name="INN"
                   className="w-full bg-white py-[17px] font-regular text-[14px] leading-[16.94px] text-black px-[10px] rounded-[12px] outline-none border-[1px] border-[#DCDCDC] placeholder:text-black"
-                  placeholder={`${t('price.inn')}`}
+                  placeholder={`${t('dashboard.price.inn')}`}
                 />
               </div>
             ) : (
@@ -490,13 +490,13 @@ const Price = () => {
             )}
             {innData && (
               <p className="w-[498px] ml-[160px] mb-[20px] py-[24px] rounded-[15px] border-[1px] border-[#DCDCDC] pl-[15px] pr-[5px] cursor-not-allowed font-regular text-[14px] leading-[17px]">
-                <span className="font-bold"> {t('price.priceComanyName')} </span>
+                <span className="font-bold"> {t('dashboard.price.priceComanyName')} </span>
                 {innData}
               </p>
             )}
             <label className="w-[662px] flex items-start justify-between mb-[18px]">
               <span className="font-light text-[14px] leading-[18.2px] text-[#202020]">
-                {t('price.cadastralNumber')}
+                {t('dashboard.price.cadastralNumber')}
               </span>
               <div className="flex flex-col gap-[10px]">
                 <input
@@ -506,17 +506,17 @@ const Price = () => {
                   required
                   className="w-[500px] py-[10px] pl-[6px] pr-[4px] rounded-[12px] bg-transparent outline-none border-[1px] border-[#DCDCDC]"
                   type="text"
-                  placeholder={`${t('price.placeholder')}`}
+                  placeholder={`${t('dashboard.price.placeholder')}`}
                   aria-label={`Kadastr`}
                 />
                 {kadastrData && (
                   <div className="w-[500px] py-[24px] rounded-[15px] border-[1px] border-[#DCDCDC] pl-[15px] pr-[2px] cursor-not-allowed font-regular text-[14px] leading-[17px] flex flex-col gap-[10px]">
                     <div className="flex items-center gap-[10px]">
-                      <span className="font-bold"> {t('price.pricehouseLocation')} </span>
+                      <span className="font-bold"> {t('dashboard.price.pricehouseLocation')} </span>
                       <p className="w-[375px]">{kadastrData.region}</p>
                     </div>
                     <div className="flex items-center gap-[10px]">
-                      <span className="font-bold"> {t('price.pricehouseArea')} </span>
+                      <span className="font-bold"> {t('dashboard.price.pricehouseArea')} </span>
                       <p>{kadastrData.area} Кв.м</p>
                     </div>
                   </div>
@@ -525,27 +525,27 @@ const Price = () => {
             </label>
             <label className="w-[672px] flex items-center justify-between mb-[18px]">
               <span className="font-light text-[15px] leading-[18.2px] text-[#202020]">
-                {t('price.propertyCondition')}
+                {t('dashboard.price.propertyCondition')}
               </span>
               <Select
                 required
                 size="large"
                 className="w-[500px] rounded-[12px] bg-transparent outline-none border-[1px] border-[#DCDCDC] text-[#898989]"
                 showSearch
-                placeholder={`${t('price.placeholder')}`}
+                placeholder={`${t('dashboard.price.placeholder')}`}
                 onChange={handleChangeSustain}
                 options={sustainList}
               />
             </label>
             <label className="w-[672px] flex items-center justify-between mb-[18px]">
               <span className="font-light text-[15px] leading-[18.2px] text-[#202020]">
-                {t('price.propertyLocation')}
+                {t('dashboard.price.propertyLocation')}
               </span>
               <Select
                 mode="tags"
                 size="large"
                 className="w-[500px] rounded-[12px] bg-transparent outline-none border-[1px] border-[#DCDCDC] text-[#898989]"
-                placeholder={`${t('price.placeholder')}`}
+                placeholder={`${t('dashboard.price.placeholder')}`}
                 onChange={handleChangeAround}
                 options={aroundListList}
               />
@@ -559,14 +559,14 @@ const Price = () => {
                 size="large"
                 className="w-[500px] rounded-[12px] bg-transparent outline-none border-[1px] border-[#DCDCDC] text-[#898989]"
                 showSearch
-                placeholder={`${t('price.placeholder')}`}
+                placeholder={`${t('dashboard.price.placeholder')}`}
                 onChange={handleChangeObject}
                 options={amenitiesList}
               />
             </label>
             <div className="w-[922px] mt-5 relative flex justify-between">
               <p className="font-light text-[15px] leading-[18.2px] text-[#202020]">
-                {t('price.uploadImage')}
+                {t('dashboard.price.uploadImage')}
               </p>
               <div className="w-[753px] flex flex-wrap gap-[22px]">
                 {selectedImages.map((item, index) => (
@@ -611,7 +611,7 @@ const Price = () => {
               {isLoading ? (
                 <Spin className="scale-[1.2] bg-transparent" size="large" />
               ) : (
-                <p>{t('price.button')}</p>
+                <p>{t('dashboard.price.button')}</p>
               )}
             </button>
           </form>

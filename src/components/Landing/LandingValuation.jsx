@@ -19,10 +19,10 @@ const LandingValuation = () => {
                         {index === 3 && <ValuationItem4Icon/>}
                         <div className='flex flex-col gap-[5px] mt-8'>
                             <h3 className='font-semibold text-[18px] leading-[28px] text-[#0F172A]'>
-                                {t(`valuation.items.${index}.title`)}
+                                {t(`landing.valuation.items.${index}.title`)}
                             </h3>
                             <p className='font-regular text-[16px] leading-[24px] text-[#334155]'>
-                                {t(`valuation.items.${index}.desc`)}
+                                {t(`landing.valuation.items.${index}.desc`)}
                             </p>
                         </div>
                     </li>
