@@ -1,0 +1,124 @@
+{
+    "nav": {
+        "home": "Asosiy",
+        "usage": "Foydalanish",
+        "price": "Narx",
+        "contact": "Bog'lanish"
+    },
+    "auth": {
+        "login": "Kirish",
+        "signup": "Ro'yxatdan o'tish"
+    },
+    "hero": {
+        "title": "E-Expertga xush kelibsiz, sizning mulkni baholash bo‘yicha hamkoringiz",
+        "subtitle": "Biz kvartiralar, uylar va avtomobillar uchun mulk bahosini baholashda ixtisoslashganmiz. Keling, haqiqiy qiymatni birga topaylik."
+    },
+    "valuation": {
+        "title": "Aniq Mulkni Baholash",
+        "items": [
+            {
+                "title": "Har tomonlama tahlil",
+                "desc": "Aniq mulk uchun ma'lumotlarga asoslangan yondashuvimizdan foydalaning."
+            },
+            {
+                "title": "Foydalanuvchi uchun qulay interfeys",
+                "desc": "Bizning intuitiv platformamizni osonlik bilan boshqaring."
+            },
+            {
+                "title": "Ekspert fikrlari",
+                "desc": "Sanoat ekspertlaridan qimmatli tushunchalar oling."
+            },
+            {
+                "title": "Har tomonlama tahlil",
+                "desc": "Aniq mulk uchun ma'lumotlarga asoslangan yondashuvimizdan foydalaning."
+            }
+        ]
+    },
+    "works": {
+        "title": "Qanday ishlaydi?",
+        "leftText1": "Ma'lumot yuklash",
+        "leftText2": "Ko'chmas va ko'chma mulkni baholash",
+        "rightText1": "To'lovni amalga oshirish",
+        "rightText2": "Rasmiy ma'lumotni olish"
+    },
+    "worksPrice": {
+        "title": "Xizmatlar narxi",
+        "leftText": "300 000 so'm",
+        "rightText": "Xizmatlarga nima kiradi",
+        "rightText2": "Bu yerda siz to'lov nima uchun olinishi bo'yicha ma'lumot olishingiz mumkin",
+        "bottomText": "Hujjatni yuklash"
+    },
+    "publicOpinion": {
+        "title": "Jamoat fikri",
+        "items1": [
+            {
+                "title": "Emili",
+                "subtitle": "Ko'chmas mulk tahlilchisi",
+                "text": "Emili bozor tendensiyalarini tahlil qilishda a'lo darajaga ega bo'lib, uylar va mulklar uchun aniq baholarni taqdim etadi."
+            },
+            {
+                "title": "Maykl",
+                "subtitle": "Avtomobil baholash mutaxassisi",
+                "text": "Maykl avtomobillarning haqiqiy bozor qiymatini baholashda malakali bo'lib, eng yaxshi bitimlarni ta'minlaydi."
+            },
+            {
+                "title": "Sara",
+                "subtitle": "Mulk bo'yicha maslahat beruvchi",
+                "text": "Sara mulk investitsiyalari bo'yicha foydali maslahatlar beradi, mijozlarga ongli qarorlar qabul qilishda yordam beradi."
+            }
+        ],
+        "items2": [
+            {
+                "title": "Emili",
+                "subtitle": "Ko'chmas mulk tahlilchisi",
+                "text": "Emili bozor tendensiyalarini tahlil qilishda a'lo darajaga ega bo'lib, uylar va mulklar uchun aniq baholarni taqdim etadi."
+            },
+            {
+                "title": "Emili",
+                "subtitle": "Ko'chmas mulk tahlilchisi",
+                "text": "Emili bozor tendensiyalarini tahlil qilishda a'lo darajaga ega bo'lib, uylar va mulklar uchun aniq baholarni taqdim etadi."
+            },
+            {
+                "title": "Emili",
+                "subtitle": "Ko'chmas mulk tahlilchisi",
+                "text": "Emili bozor tendensiyalarini tahlil qilishda a'lo darajaga ega bo'lib, uylar va mulklar uchun aniq baholarni taqdim etadi."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Biz bilan bog'laning",
+        "leftText1": "Bog'lanish havolalari",
+        "leftText2": "Bizning xizmatlarimizdan foydalanish uchun ushbu havolalardan ro'yxatdan o'ting",
+        "leftText3": "Bog'lanish uchun havolalar",
+        "leftText4": "Ismingizni kiriting",
+        "leftText5": "Elektron pochta",
+        "leftText6": "Xabar qoldiring...",
+        "leftText7": "Yuborish",
+        "rightText1": "Yagnobod, Mumtoz mahallasi, 17-uy"
+    },
+    "footer": {
+        "title": "E-Expert haqida",
+        "title2": "Bizning xizmatlarimiz",
+        "title3": "Narx rejalari",
+        "leftText": "Yagnobod, Mumtoz mahallasi, 17-uy",
+        "leftText2": "© E-Expert 2023, Sizning ishonchli mulk baholovchingiz"
+    },
+    "dashboard": {
+        "realEstateInfo": "Ko'chmas mulk ma'lumotlari",
+        "propertyType": "Mulk turi",
+        "houseType": "Turini tanlang",
+        "chooseHouseType": "Biznes turini tanlang",
+        "houseOwner": "Mulk egasi",
+        "fullName": "F.I.SH",
+        "companyName": "Tashkilot nomi",
+        "cadastreNumber": "Kadastr raqami",
+        "enterCadastreNumber": "Iltimos kadastr raqam kiriting",
+        "kadastrNumber": "Kadastr raqamingiz",
+        "propertyLocation": "Uy Manzili",
+        "propertyArea": "Obyekt maydoni",
+        "propertyCondition": "Mulk holati",
+        "propertyAround": "Mulkning atrofida",
+        "imageUpload": "Rasm yuklash",
+        "priceEstimate": "Narx baholash"
+    }
+}
