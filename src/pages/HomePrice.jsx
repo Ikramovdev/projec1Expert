@@ -7,6 +7,7 @@ import { instance } from '../hook/instance'
 import { API_REQUEST } from '../hook/useEnv'
 import QRkode from "../assets/images/QRkode.jpg"
 import { useTranslation } from 'react-i18next'
+import { useLanguage } from '../context/LanguageContext'
 
 
 const HomePrice = () => {
@@ -16,20 +17,30 @@ const HomePrice = () => {
   const { id } = useParams();
   const navigate = useNavigate()
   const [newData, setNewData] = useState([])
-  const now = new Date();
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
-    instance().get(`${API_REQUEST}/properties/real-estate/${id}/`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }).then(res => {
-      setNewData(res.data);
-    });
+    if (language == "ru") {
+      instance().get(`${API_REQUEST}/properties/real-estate/${id}/?lang=ru`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }).then(res => {
+        setNewData(res.data);
+      });
+    }
+    else if (language == 'uz') {
+      instance().get(`${API_REQUEST}/properties/real-estate/${id}/`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }).then(res => {
+        setNewData(res.data);
+      });
+    }
   }, [id]);
   if (!newData) return <p>Yuklanmoqda...</p>
   // dowland file
-  console.log(newData);
   function handleDowlandFile() {
     window.open("https://eexpert.uz/media/documents/22.pdf", "_blank");
   }
@@ -76,22 +87,22 @@ const HomePrice = () => {
                     {newData.details.area_total &&
                       <div className='flex items-center justify-between  text-start'>
                         <h3 className='font-semibold text-[20px] text-black leading-[33.14px]'>{t('dashboard.homePrice.areaTotal')}</h3>
-                        <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area_total} м</p>
+                        <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area_total} {t('dashboard.homePrice.m')}</p>
                       </div>
                     }
                     {newData.details.area_livable &&
                       <div className='flex items-center justify-between  text-start'>
                         <h3 className='font-semibold text-[20px] text-black leading-[33.14px]'>{t('dashboard.homePrice.areaLivable')}</h3>
-                        <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area_livable} Кв.м</p>
+                        <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area_livable} {t('dashboard.homePrice.kv')}</p>
                       </div>
                     }
                     <div className='flex items-center justify-between  text-start'>
                       <h3 className='font-semibold text-[20px] text-black leading-[33.14px]'>{t('dashboard.homePrice.objectArea')}</h3>
-                      <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area} Кв.м</p>
+                      <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.area} {t('dashboard.homePrice.kv')}</p>
                     </div>
                     <div className='flex items-center justify-between  text-start'>
                       <h3 className='font-semibold text-[20px] text-black leading-[33.14px]'>{t('dashboard.homePrice.ceilingHeight')}</h3>
-                      <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.ceiling_height} м</p>
+                      <p className='font-light text-[20px] leading-[33.14px] text-[#000000]'>{newData.details.ceiling_height} {t('dashboard.homePrice.m')}</p>
                     </div>
                     <div className='flex items-center justify-between  text-start'>
                       <h3 className='font-semibold text-[20px] text-black leading-[33.14px]'>{t('dashboard.homePrice.propertyStatus')}</h3>
@@ -110,7 +121,7 @@ const HomePrice = () => {
               <div className='flex flex-col'>
                 <h3 className='font-medium text-[25px] leading-[30.26px] text-[#1E90FFCC]'>{newData.price} {t('dashboard.homePrice.money')}</h3>
                 {newData.details ?
-                  <p>{t('dashboard.homePrice.exchangeRateStatus')}: <span className='text-[#1E90FFCC]'>{newData.details.price.usd}$</span></p> : null
+                  <p>{t('dashboard.homePrice.exchangeRateStatus')} <span className='text-[#1E90FFCC]'>{newData.details.price.usd}$</span></p> : null
                 }
               </div>
             </div>

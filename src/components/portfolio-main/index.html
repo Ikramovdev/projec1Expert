@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Professional portfolio of Ikramovdev - Frontend Developer specializing in React.js and Next.js">
+    <meta name="keywords" content="frontend developer, React.js, Next.js, web development">
+    <meta property="og:title" content="Ikramovdev | Frontend Developer">
+    <title>Ikramovdev</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dark-mode.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/animations.css">
+    <!-- Preload critical assets -->
+    <link rel="preload" href="./css/style.css" as="style">
+    <link rel="preload" href="./fonts/your-font.woff2" as="font" crossorigin>
+    <!-- Add these meta tags for better dark mode support -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body class="dark-mode">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-text">Ikramovdev</span>
+                <div class="logo-dot"></div>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home" class="active" data-i18n="nav.home">Home</a>
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+                <a href="#skills" data-i18n="nav.skills">Skills</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+
+                <div class="nav-controls">
+                    <div class="language-selector">
+                        <button class="language-btn" aria-label="Change language" data-i18n="header.languageSelector">
+                            <i class="fas fa-globe"></i>
+                            <span class="current-lang">EN</span>
+                        </button>
+                        <div class="language-dropdown">
+                            <button data-lang="en" class="active">
+                                <span class="lang-flag">🇺🇸</span>
+                                <span class="lang-text">English</span>
+                            </button>
+                            <button data-lang="ru">
+                                <span class="lang-flag">🇷🇺</span>
+                                <span class="lang-text">Русский</span>
+                            </button>
+                            <button data-lang="uz">
+                                <span class="lang-flag">🇺🇿</span>
+                                <span class="lang-text">O'zbek</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <div class="icon-container">
+                            <i class="fas fa-sun sun-icon"></i>
+                            <i class="fas fa-moon moon-icon"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-greeting" data-i18n="hero.greeting">Hi there 👋, I'm</div>
+            <h1 class="animate slide-up">
+                <span class="text-gradient">Ikramovdev</span>
+            </h1>
+            <h2 class="animate slide-up delay-1">
+                <div class="typed-container">
+                    <span class="typed-text"></span>
+                </div>
+            </h2>
+            <p class="animate slide-up delay-2" data-i18n="hero.description">Crafting modern web experiences with
+                React.js and Next.js</p>
+            <div class="hero-buttons animate slide-up delay-3">
+                <a href="#portfolio" class="cta-button primary">
+                    <span data-i18n="hero.viewWork">View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="cta-button secondary">
+                    <span data-i18n="hero.getInTouch">Get in Touch</span>
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <!-- Resume Download Button -->
+                <a href="./file/IkramovdevCvv.pdf" download class="cta-button resume">
+                    <span data-i18n="hero.downloadCV">Download CV</span>
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+            <div class="scroll-indicator animate fade-in delay-4">
+                <span data-i18n="hero.scrollDown">Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">
+            <span class="title-icon">👨‍ ? ?</span>
+            <span data-i18n="about.title">About Me</span>
+        </h2>
+        <div class="about-content">
+            <div class="profile-image animate slide-left">
+                <div class="image-wrapper">
+                    <img src="./images/foto5.jpg" alt="Ikramovdev" class="profile-img" loading="lazy">
+                    <div class="image-overlay">
+                        <div class="experience-badge" data-i18n="about.experience">+4 month Experience</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text animate slide-right">
+                <div class="about-header">
+                    <h3 data-i18n="about.role">Frontend Developer & Content Creator</h3>
+                    <div class="about-tags">
+                        <span class="tag" data-i18n="about.tags.0">Web Development</span>
+                        <span class="tag" data-i18n="about.tags.1">UI/UX</span>
+                        <span class="tag" data-i18n="about.tags.2">Content Creation</span>
+                    </div>
+                </div>
+                <p data-i18n="about.description1">I am a dedicated Frontend Developer with 4+ years of experience,
+                    specializing in building modern web applications. With a unique blend of technical expertise and
+                    digital marketing background, I bring a holistic approach to web development.</p>
+                <p class="mt-4" data-i18n="about.description2">I maintain a technology blog and create educational
+                    content, sharing my knowledge with the tech community. My experience as a Telegram Sales and
+                    Advertising Manager has enhanced my ability to create user-centric solutions.</p>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <i class="fab fa-react" title="React.js"></i>
+                        <span>React.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <svg class="next-icon" viewBox="0 0 24 24" title="Next.js">
+                            <path
+                                d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z" />
+                        </svg>
+                        <span>Next.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-code" title="TypeScript"></i>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <svg class="tailwind-icon" viewBox="0 0 24 24" title="Tailwind CSS">
+                            <path
+                                d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
+                        </svg>
+                        <span>Tailwind</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2 class="section-title">My Projects</h2>
+        <div class="portfolio-grid">
+            <!-- Project cards will be dynamically added via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">
+            <span class="title-icon">🚀</span>
+            <span data-i18n="skills.title">Skills & Expertise</span>
+        </h2>
+        <div class="skills-container">
+            <div class="skills-header animate fade-in">
+                <p class="skills-intro" data-i18n="skills.intro">A collection of technologies I work with on a daily
+                    basis</p>
+                <div class="skills-summary">
+                    <div class="summary-item animate slide-up">
+                        <span class="summary-number">4+</span>
+                        <span class="summary-label" data-i18n="skills.experience">Years Experience</span>
+                    </div>
+                    <div class="summary-item animate slide-up delay-1">
+                        <span class="summary-number">5+</span>
+                        <span class="summary-label" data-i18n="skills.projects">Projects Completed</span>
+                    </div>
+                    <div class="summary-item animate slide-up delay-2">
+                        <span class="summary-number">100%</span>
+                        <span class="summary-label" data-i18n="skills.satisfaction">Client Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category animate slide-up">
+                    <div class="category-header">
+                        <i class="fab fa-react"></i>
+                        <h3>Core Technologies</h3>
+                    </div>
+                    <div class="skill" data-skill="react">
+                        <div class="skill-info">
+                            <span>React.js & Next.js</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="javascript">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="typescript">
+                        <div class="skill-info">
+                            <span>TypeScript</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="tailwind">
+                        <div class="skill-info">
+                            <span>Tailwind CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill" data-skill="scss">
+                        <div class="skill-info">
+                            <span>Sass/SCSS</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category animate slide-up delay-1">
+                    <div class="category-header">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Styling</h3>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-info">
+                            <span>Styling Skills</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3 data-i18n="contact.subtitle">Let's Connect</h3>
+                <p data-i18n="contact.description">Feel free to reach out for collaborations or just a friendly hello
+                </p>
+
+                <div class="contact-items">
+                    <a href="mailto:mubinullakh@gmail.com" class="contact-item email">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <span>mubinullakh@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://t.me/Ikramovdev" target="_blank" class="contact-item telegram">
+                        <i class="fab fa-telegram"></i>
+                        <div class="contact-text">
+                            <h4>Telegram</h4>
+                            <span>@Ikramovdev</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/Ikramovdev" target="_blank" class="social-btn">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhammad-mubiyn-ikramov-2263a3315" target="_blank"
+                        class="social-btn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/igsh=MWw4dnkwdHZyYmJ0NQ%3D%3D&ut" target="_blank"
+                        class="social-btn">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/share/19tqRAZb51/?mibextid=wwXIfr" target="_blank"
+                        class="social-btn">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://youtube.com/@ikramovdev" target="_blank" class="social-btn">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+            </div>
+
+            <form id="contact-form" class="contact-form">
+                <h3>Send Message</h3>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name" data-i18n="contact.form.name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email" data-i18n="contact.form.email">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder=" " 
+                           pattern="[0-9]{9,12}" title="Telefon raqamni to'g'ri kiriting"
+                           required>
+                    <label for="phone" data-i18n="contact.form.phone">Telefon</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder=" " required>
+                    <label for="subject" data-i18n="contact.form.subject">Subject</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder=" " required></textarea>
+                    <label for="message" data-i18n="contact.form.message">Message</label>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span data-i18n="contact.form.send">Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">
+            <span class="title-icon">📸</span>
+            <span data-i18n="gallery.title">Photo Gallery</span>
+        </h2>
+        <div class="gallery-grid">
+            <div class="gallery-item animate fade-in">
+                <div class="gallery-image">
+                    <img src="./images/foto1.jpg" alt="Gallery Image 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3 data-i18n="gallery.image1.title">Photos from Tashkent City</h3>
+                            <p data-i18n="gallery.image1.description">1-photo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item animate fade-in delay-1">
+                <div class="gallery-image">
+                    <img src="./images/foto2.jpg" alt="Gallery Image 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3 data-i18n="gallery.image2.title">Photos from Tashkent City</h3>
+                            <p data-i18n="gallery.image2.description">2-photo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item animate fade-in delay-2">
+                <div class="gallery-image">
+                    <img src="./images/foto3.jpg" alt="Gallery Image 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3 data-i18n="gallery.image3.title">Photos from Tashkent City</h3>
+                            <p data-i18n="gallery.image3.description">3-photo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item animate fade-in delay-3">
+                <div class="gallery-image">
+                    <img src="./images/foto4.jpg" alt="Gallery Image 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3 data-i18n="gallery.image4.title">Photos from Tashkent City</h3>
+                            <p data-i18n="gallery.image4.description">4-photo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <span class="footer-logo">Ikramovdev</span>
+                    <p data-i18n="footer.role">Frontend Developer & Content Creator</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Ikramovdev" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhammad-mubiyn-ikramov-2263a3315" target="_blank"
+                        title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://t.me/Ikramovdev" target="_blank" title="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="https://www.instagram.com/igsh=MWw4dnkwdHZyYmJ0NQ%3D%3D&ut" target="_blank"
+                        title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/19tqRAZb51/?mibextid=wwXIfr" target="_blank"
+                        title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://youtube.com/@ikramovdev" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2024 Ikramovdev. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home" data-i18n="footer.links.home">Home</a>
+                    <a href="#about" data-i18n="footer.links.about">About</a>
+                    <a href="#portfolio" data-i18n="footer.links.portfolio">Portfolio</a>
+                    <a href="#contact" data-i18n="footer.links.contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top" data-i18n="common.backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link" data-i18n="common.skipToContent">Skip to main content</a>
+
+    <!-- Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Muvaffaqiyatli yuborildi!</h3>
+            <p>Sizning xabaringiz qabul qilindi</p>
+            <button class="modal-close" id="modalClose">OK</button>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/dark-mode.js"></script>
+    <script src="./js/language.js"></script>
+</body>
+
+</html>

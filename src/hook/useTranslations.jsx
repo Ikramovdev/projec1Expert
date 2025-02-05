@@ -10,7 +10,7 @@ export function useTranslation() {
           console.warn(`Unsupported language: ${language}`);
           return;
         }
-        const response = await import(`../translations/Dashboard/${language}.json`);
+        const response = await import(`../translations/${language}.json`);
         setTranslations(response.default);
       } catch (error) {
         console.error(`Error loading translations for ${language}:`, error);

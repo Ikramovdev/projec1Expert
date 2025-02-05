@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { PATH } from '../hook/usePath'
-import { History, HomePrice, Price, Profile, Guide, SignIn, SignUp, NotFound } from "../pages"
+import { History, HomePrice, Price, Profile, Guide, SignIn, SignUp, NotFound, RealEstate, Auto } from "../pages"
 import EvalutePrice from '../pages/EvalutePrice'
 import Home from '../pages/Home'
 
@@ -12,6 +12,8 @@ const RouteCustom = () => {
       <Route path={PATH.home} element={<Home />} />
       <Route path={PATH.history} element={<History />} />
       <Route path={PATH.price} element={<Price />} />
+      <Route path={PATH.realEstate} element={<RealEstate />} />
+      <Route path={PATH.auto} element={<Auto />} />
       <Route path={PATH.profile} element={<Profile />} />
       <Route path={PATH.homePrice} element={<HomePrice />} />
       <Route path={PATH.guide} element={<Guide />} />

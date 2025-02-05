@@ -4,6 +4,8 @@ export const PATH = {
     signUp: "/sign-up",
     history: '/history',
     price: '/price',
+    realEstate: '/real-estate',
+    auto: '/auto',
     profile: '/profile',
     homePrice: "/price/home-price/:id",
     guide: "/guide",

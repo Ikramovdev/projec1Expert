@@ -2,6 +2,8 @@
   "dashboard": {
     "navbar": {
       "price": "Mulk Baholash",
+      "realEstate":"Ko'chmas mulk",
+      "auto":"auto",
       "history": "Tarix",
       "guide": "Yo'riqnoma",
       "profile": "Shaxsiy kabinet",
@@ -12,6 +14,7 @@
       "cancel": "Bekor qilish",
       "yes": "Ha"
     },
+    "comingSoon":"Tez Kunda...",
     "price": {
       "title": "Ko'chmas mulk ma'lumotlari",
       "houseType": "Mulk turi",
@@ -40,6 +43,7 @@
       "listtext1": "Sana",
       "housetype": "Mulk turi",
       "noData": "Malumotlar yo'q",
+      "money":"so'm",
       "price": "Baholash narxi",
       "veiw": "Ko'rish"
     },
@@ -53,6 +57,8 @@
       "district": "Tuman",
       "noData": "Malumot yo'q",
       "noMoney": "0 so'm",
+      "kv":"Kv. m",
+      "m":"m",
       "money": "so'm",
       "objectArea": "Obyekt maydoni",
       "areaTotal": "Yer maydoni",
@@ -85,7 +91,7 @@
       "title": "Yo'riqnoma"
     },
     "profile": {
-      "title": "Profil",
+      "title": "SHaxsiy Kabinet",
       "changeAvatar": "Rasmni o'zgartirish",
       "oneId": "ONE ID",
       "accountInformation": "Akkount ma'lumotlari",
@@ -220,7 +226,7 @@
       "leftText": "300 000 so'm",
       "rightText": "Xizmatlarga nima kiradi",
       "rightText2": "Bu yerda siz to'lov nima uchun olinishi bo'yicha ma'lumot olishingiz mumkin",
-      "bottomText": "Hujjatni yuklash"
+      "bottomText": "Document yuklash"
     },
     "publicOpinion": {
       "title": "Jamoat fikri",

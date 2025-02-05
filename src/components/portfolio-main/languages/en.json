@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi there 👋, I'm",
+    "description": "Crafting modern web experiences with React.js and Next.js",
+    "viewWork": "View My Work",
+    "getInTouch": "Get in Touch",
+    "scrollDown": "Scroll Down",
+    "downloadCV": "Download CV",
+    "typedRoles": {
+      "role1": "Frontend Developer",
+      "role2": "React Developer",
+      "role3": "Next.js Developer"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "role": "Frontend Developer & Content Creator",
+    "tags": ["Web Development", "UI/UX", "Content Creation"],
+    "description1": "I am a dedicated Frontend Developer with 4+ years of experience, specializing in building modern web applications. With a unique blend of technical expertise and digital marketing background, I bring a holistic approach to web development.",
+    "description2": "I maintain a technology blog and create educational content, sharing my knowledge with the tech community. My experience as a Telegram Sales and Advertising Manager has enhanced my ability to create user-centric solutions.",
+    "experience": "4+ Years Experience"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's Connect",
+    "description": "Feel free to reach out for collaborations or just a friendly hello",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "intro": "A collection of technologies I work with on a daily basis",
+    "experience": "Years Experience",
+    "projects": "Projects Completed",
+    "satisfaction": "Client Satisfaction"
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "image1": {
+      "title": "Image Title 1",
+      "description": "Brief description of the image"
+    },
+    "image2": {
+      "title": "Image Title 2",
+      "description": "Brief description of the image"
+    },
+    "image3": {
+      "title": "Image Title 3",
+      "description": "Brief description of the image"
+    },
+    "image4": {
+      "title": "Image Title 4",
+      "description": "Brief description of the image"
+    }
+  },
+  "footer": {
+    "role": "Frontend Developer & Content Creator",
+    "copyright": "© 2024 Ikramovdev. All rights reserved.",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    }
+  },
+  "common": {
+    "backToTop": "Back to Top",
+    "skipToContent": "Skip to main content"
+  },
+  "header": {
+    "languageSelector": "Select Language",
+    "themeToggle": "Toggle Theme"
+  }
+} 

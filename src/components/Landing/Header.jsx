@@ -36,8 +36,8 @@ const Header = () => {
   const [navbarList, setNavbarList] = useState(navList);
 
   const languageOptions = [
-    { value: 'Uzb', label: 'Uzb' },
-    { value: 'Rus', label: 'Rus' }
+    { value: 'uz', label: 'uz' },
+    { value: 'ru', label: 'ru' }
   ];
 
   const handleLanguageChange = (value) => {
@@ -46,7 +46,7 @@ const Header = () => {
     
     const updatedNavbarList = navbarList.map(item => {
       let newValue = item.value;
-      if (value === 'Rus') {
+      if (value === 'ru') {
         switch (item.value) {
           case 'Asosiy':
             newValue = 'Дом';
@@ -76,12 +76,12 @@ const Header = () => {
   };
 
   const content = {
-    'Uzb': {
+    'uz': {
       title: "O'zbekcha sarlavha",
       description: "O'zbekcha tavsif",
       // ... boshqa matnlar
     },
-    'Rus': {
+    'ru': {
       title: "Русский заголовок",
       description: "Русское описание",
       // ... boshqa matnlar
@@ -111,10 +111,10 @@ const Header = () => {
           />
           <div className='ml-[41px] flex items-center gap-[16px]'>
             <button onClick={() => navigate(`${PATH.signIn}`)} className='font-regular text-[16px] leading-[24px] text-[#414141]'>
-              {language === 'Rus' ? 'Войти' : 'Log in'}
+              {language === 'ru' ? 'Войти' : 'Log in'}
             </button>
             <button onClick={() => navigate(`${PATH.signUp}`)} className='w-[109px] py-[12px] text-center bg-[#1E90FF] rounded-[28px] text-white'>
-              {language === 'Rus' ? 'Регистрация' : 'Sign up'}
+              {language === 'ru' ? 'Регистрация' : 'Sign up'}
             </button>
           </div>
         </div>

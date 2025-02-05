@@ -12,7 +12,6 @@ const SignUp = () => {
   const navigate = useNavigate()
   const [phone, setPhone] = useState("+998");
   const [isLoading, setIsLoading] = useState(false)
-  console.log(phone);
   function handleSignUpBtnClick(event) {
     event.preventDefault();
     setIsLoading(true)

@@ -15,6 +15,12 @@ i18n
       }
     },
     lng: 'ru',
+    react: {
+      useSuspense: false,
+    },
+    interpolation: {
+      escapeValue: false
+    },
     fallbackLng: 'ru',
     interpolation: {
       escapeValue: false,

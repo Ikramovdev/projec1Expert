@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Men haqimda",
+    "portfolio": "Portfolio",
+    "skills": "Ko'nikmalar",
+    "contact": "Aloqa"
+  },
+  "hero": {
+    "greeting": "Salom 👋, men",
+    "description": "React.js va Next.js yordamida zamonaviy veb-ilovalar yarataman",
+    "viewWork": "Ishlarimni ko'rish",
+    "getInTouch": "Bog'lanish",
+    "scrollDown": "Pastga",
+    "downloadCV": "CV yuklab olish",
+    "typedRoles": {
+      "role1": "Frontend Dasturchi",
+      "role2": "React Dasturchi",
+      "role3": "Next.js Dasturchi"
+    }
+  },
+  "about": {
+    "title": "Men haqimda",
+    "role": "Frontend Dasturchi & Kontent Yaratuvchi",
+    "tags": ["Veb-dasturlash", "UI/UX", "Kontent yaratish"],
+    "description1": "Men 4 yildan ortiq tajribaga ega Frontend dasturchiman, zamonaviy veb-ilovalar yaratishga ixtisoslashganman. Texnik bilim va raqamli marketing sohasidagi tajribamni birlashtirgan holda, veb-ishlab chiqishga kompleks yondashuv qo'llayman.",
+    "description2": "Men texnologiya blogini yuritaman va ta'lim kontentini yarataman, bilimlarimni IT hamjamiyat bilan baham ko'raman. Telegram'da sotish va reklama menejeri sifatidagi tajribam foydalanuvchilarga yo'naltirilgan yechimlarni yaratish qobiliyatimni oshirdi.",
+    "experience": "4+ yillik tajriba"
+  },
+  "contact": {
+    "title": "Bog'lanish",
+    "subtitle": "Keling, hamkorlik qilaylik",
+    "description": "Hamkorlik uchun yoki shunchaki salomlashish uchun bog'laning",
+    "form": {
+      "name": "Ism",
+      "email": "Email",
+      "subject": "Mavzu",
+      "message": "Xabar",
+      "send": "Yuborish"
+    }
+  },
+  "skills": {
+    "title": "Ko'nikmalar va Tajriba",
+    "intro": "Men har kuni ishlaydigan texnologiyalar",
+    "experience": "Yillik Tajriba",
+    "projects": "Bajarilgan Loyihalar",
+    "satisfaction": "Mijozlar Mamnuniyati"
+  },
+  "gallery": {
+    "title": "Fotogalereya",
+    "image1": {
+      "title": "Rasm Nomi 1",
+      "description": "Rasm haqida qisqacha ma'lumot"
+    },
+    "image2": {
+      "title": "Rasm Nomi 2",
+      "description": "Rasm haqida qisqacha ma'lumot"
+    },
+    "image3": {
+      "title": "Rasm Nomi 3",
+      "description": "Rasm haqida qisqacha ma'lumot"
+    },
+    "image4": {
+      "title": "Rasm Nomi 4",
+      "description": "Rasm haqida qisqacha ma'lumot"
+    }
+  },
+  "footer": {
+    "role": "Frontend Dasturchi va Kontent Yaratuvchi",
+    "copyright": "© 2024 Ikramovdev. Barcha huquqlar himoyalangan.",
+    "links": {
+      "home": "Bosh sahifa",
+      "about": "Men haqimda",
+      "portfolio": "Portfolio",
+      "contact": "Aloqa"
+    }
+  },
+  "common": {
+    "backToTop": "Yuqoriga",
+    "skipToContent": "Asosiy mazmuniga o'tish"
+  },
+  "header": {
+    "languageSelector": "Tilni tanlash",
+    "themeToggle": "Mavzuni o'zgartirish"
+  }
+} 

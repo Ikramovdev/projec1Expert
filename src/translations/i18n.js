@@ -5,15 +5,15 @@ import ruTranslations from "./ru.json";
 
 i18n.use(initReactI18next).init({
   resources: {
-    uzb: {
+    uz: {
       translation: uzTranslations,
     },
-    rus: {
+    ru: {
       translation: ruTranslations,
     },
   },
-  lng: "uzb",
-  fallbackLng: "uzb",
+  lng: "uz",
+  fallbackLng: "uz",
   interpolation: {
     escapeValue: false,
   },

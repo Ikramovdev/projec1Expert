@@ -10,6 +10,7 @@ import { XIcon } from "../assets/icon/Icon";
 import { LanguageSelect } from "../components/Landing/LanguageSelect";
 import { useLanguage } from "../context/LanguageContext";
 import { useTranslation } from 'react-i18next';
+import DashboardHeader from "../components/DashboardHeader";
 
 const Price = () => {
   const navigate = useNavigate();
@@ -95,8 +96,7 @@ const Price = () => {
           setDisplayText(t('dashboard.displayText.available'));
         }
     }
-  }, [typeOfHousing, t]);
-
+  }, [typeOfHousing, t])
   // Around Function and List
   const aroundListList = [
     {
@@ -174,18 +174,34 @@ const Price = () => {
     setInn("");
     setPnfl(e.target.value);
     if (e.target.value.length > 13) {
-      instance()
-        .get(`/user/oneid/person/${e.target.value}/`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-            // "ngrok-skip-browser-warning": "true"
-          },
-        })
-        .then((res) => {
-          setPnflName(res.data.full_name);
-        });
-    } else {
+      if (language == "ru") {
+        instance()
+          .get(`/user/oneid/person/${e.target.value}/?lang=ru`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+              // "ngrok-skip-browser-warning": "true"
+            },
+          })
+          .then((res) => {
+            setPnflName(res.data.full_name);
+          });
+      }
+      else if (language == "uz") {
+        instance()
+          .get(`/user/oneid/person/${e.target.value}/`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+              // "ngrok-skip-browser-warning": "true"
+            },
+          })
+          .then((res) => {
+            setPnflName(res.data.full_name);
+          });
+      }
+    }
+    else {
       setPnflName(null);
     }
   }
@@ -197,18 +213,34 @@ const Price = () => {
     setPnfl("");
     setInn(e.target.value);
     if (e.target.value.length > 8) {
-      instance()
-        .get(`/user/oneid/company/${e.target.value}/`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-            // "ngrok-skip-browser-warning": "true"
-          },
-        })
-        .then((res) => {
-          setInnData(res.data.company_name);
-        });
-    } else {
+      if (language == "ru") {
+        instance()
+          .get(`/user/oneid/company/${e.target.value}/?lang=ru`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+              // "ngrok-skip-browser-warning": "true"
+            },
+          })
+          .then((res) => {
+            setInnData(res.data.company_name);
+          });
+      }
+      else if (language == "uz") {
+        instance()
+          .get(`/user/oneid/company/${e.target.value}/`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+              // "ngrok-skip-browser-warning": "true"
+            },
+          })
+          .then((res) => {
+            setInnData(res.data.company_name);
+          });
+      }
+    }
+    else {
       setInnData(null);
     }
   }
@@ -218,18 +250,34 @@ const Price = () => {
   function handleKadastrChange(e) {
     setKadastr(e.target.value);
     if (e.target.value.length > 12) {
-      instance()
-        .get(`/user/oneid/house/${e.target.value}/`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-            // "ngrok-skip-browser-warning": "true"
-          },
-        })
-        .then((res) => {
-          setKadastrData(res.data);
-        });
-    } else {
+      if (language == "ru") {
+        instance()
+          .get(`/user/oneid/house/${e.target.value}/?lang=ru`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+              // "ngrok-skip-browser-warning": "true"
+            },
+          })
+          .then((res) => {
+            setKadastrData(res.data);
+          }).catch(err => console.log(err.data))
+      }
+      else if (language == "uz") {
+        instance()
+          .get(`/user/oneid/house/${e.target.value}/`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+              // "ngrok-skip-browser-warning": "true"
+            },
+          })
+          .then((res) => {
+            setKadastrData(res.data);
+          }).catch(err => console.log(err.data))
+      }
+    }
+    else {
       setKadastrData(null);
     }
   }
@@ -284,43 +332,43 @@ const Price = () => {
   // post request
   function handlePriceSubmit(e) {
     e.preventDefault();
+    console.log("Til:", language);
     setSaveDocument(false);
     setIsLoading(true);
     const formData = new FormData();
     formData.append("cadastre_no", kadastr);
     around.forEach((area) => {
       formData.append("nearby_areas", area);
-      console.log("Nearby area:", area);
     });
     imgList.forEach((image) => {
       formData.append("images", image);
     });
+    formData.append("lang", language ? language : "ru");
     formData.append("ownership", ownership);
     formData.append("pinfl", pnfl);
     formData.append("inn", inn ? inn : null);
     formData.append("estate_type", typeOfHousing);
+
+    console.log("FormData:", Object.fromEntries(formData.entries()));
     setTimeout(() => {
-      axios
-        .post(`${API_REQUEST}/properties/real-estate/`, formData, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-        .then((res) => {
-          const id = res.data.id;
-          navigate(`/price/home-price/${id}`);
-        })
-        .catch((error) => {
-          console.log(error.response);
-        });
+      axios.post(`${API_REQUEST}/properties/real-estate/`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }).then((res) => {
+        const id = res.data.id;
+        navigate(`/price/home-price/${id}`);
+      }).catch((error) => {
+        console.log(error.response);
+      });
       setIsLoading(false);
     }, 1000);
   }
   // post request
   // language changes
   const languageOptions = [
-    { value: 'Uzb', label: 'Uzb' },
-    { value: 'Rus', label: 'Rus' }
+    { value: 'uz', label: 'uz' },
+    { value: 'ru', label: 'ru' }
   ];
   const handleLanguageChange = (value) => {
     setLanguage(value);
@@ -397,7 +445,6 @@ const Price = () => {
       label: t('dashboard.amenities.washingMachine'),
     },
   ];
-
   return (
     <>
       <div className="flex">
@@ -405,24 +452,17 @@ const Price = () => {
           {" "}
           <Navbar />{" "}
         </div>
-        <div className="w-[78%] pl-[64px] pr-[50px] border-l-[1px] border-[#D3D3D3] pt-[32px] h-[100vh] flex flex-col">
-          <div className="flex items-center justify-between mb-[43px]">
-            <h1 className="font-semibold text-[32px] leading-[38.73px]">{t('dashboard.price.title')}</h1>
-            <LanguageSelect
-              language={language}
-              onChange={handleLanguageChange}
-              languageOptions={languageOptions}
-            />
-          </div>
+        <div className="w-[78% h-[100vh] pl-[64px] pt-[52px] border-l-[1px] border-[#D3D3D3] flex flex-col gap-7">
+          <DashboardHeader language={language} handleLanguageChange={handleLanguageChange} languageOptions={languageOptions} title={t('dashboard.price.title')} />
           <form
             onSubmit={handlePriceSubmit}
-            className="mt-[44px] h-[85vh] overflow-y-auto"
+            className="h-[85vh] overflow-y-auto"
             autoComplete="off"
             encType="multipart/form-data"
           >
             <label className="w-[672px] flex items-center justify-between mb-[18px]">
               <span className="font-light text-[15px] leading-[18.2px] text-[#202020]">
-              {t('dashboard.price.houseType')}
+                {t('dashboard.price.houseType')}
               </span>
               <Select
                 size="large"
@@ -514,10 +554,6 @@ const Price = () => {
                     <div className="flex items-center gap-[10px]">
                       <span className="font-bold"> {t('dashboard.price.pricehouseLocation')} </span>
                       <p className="w-[375px]">{kadastrData.region}</p>
-                    </div>
-                    <div className="flex items-center gap-[10px]">
-                      <span className="font-bold"> {t('dashboard.price.pricehouseArea')} </span>
-                      <p>{kadastrData.area} Кв.м</p>
                     </div>
                   </div>
                 )}

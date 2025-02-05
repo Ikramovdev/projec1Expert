@@ -5,7 +5,7 @@ const WorksPrice = () => {
     const { t } = useTranslation()
     return (
         <section id='WorksPrice'>
-            <div className='bottomImg w-[1191px] mx-auto mb-[226px]'>
+            <div style={{ borderImageSource: "linear-gradient(180deg, #1E90FF 0%, rgba(102, 102, 102, 0) 100%)", borderImageSlice: 1}} className='bottomImg w-[1191px] mx-auto mb-[226px]'>
                 <h2 className='font-bold text-[36px] leading-[40px] text-center mb-[121px]'>{t('landing.worksPrice.title')}</h2>
                 <div className='workPrice'>
                     <div className='flex items-start'>
